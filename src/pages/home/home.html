@@ -7,13 +7,88 @@
 </ion-header>
 
 <ion-content padding>
-    <div>
-        The world is your oyster.
-        <p>
-            If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-        </p>
-    </div>
-    <div>
+    <button ion-button (click)="openPage('FotoPage')">Fotos</button>
+    <ion-list>
+        <ion-item>
+            <ion-thumbnail item-start>
+                <img src="assets/imgs/not_image.png" width="50px">
+            </ion-thumbnail>
+            <h2>My Neighbor Totoro</h2>
+            <p>Hayao Miyazaki • 1988</p>
+            <button ion-button clear item-end>View</button>
+        </ion-item><ion-item>
+            <ion-thumbnail item-start>
+                <img src="assets/imgs/alert_image.png">
+            </ion-thumbnail>
+            <h2>My Neighbor Totoro</h2>
+            <p>Hayao Miyazaki • 1988</p>
+            <button ion-button clear item-end>View</button>
+        </ion-item><ion-item>
+            <ion-thumbnail item-start>
+                <img src="assets/imgs/camera_800X300.png">
+            </ion-thumbnail>
+            <h2>My Neighbor Totoro</h2>
+            <p>Hayao Miyazaki • 1988</p>
+            <button ion-button clear item-end>View</button>
+        </ion-item>
+    </ion-list>
+    <ion-card [ngClass]="{'has-error' : true}">
+        <img src="assets/imgs/camera_800X300.png"/>
+        <ion-card-content no-padding>
+            <h2><b>1 - </b> Árvores plantadas?</h2>
+        </ion-card-content>
+
+        <hr>
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button small color="secondary" icon-start disabled>
+                    <ion-icon name="thumbs-up"></ion-icon>
+                    Conforme
+                </button>
+            </ion-col>
+
+            <ion-col text-right>
+                <button ion-button small color="danger" icon-start>
+                    <ion-icon name="thumbs-down"></ion-icon>
+                    Não Conforme
+                </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+
+    <ion-card>
+        <img src="https://picsum.photos/id/110/1200/1000"/>
+        <ion-card-content no-padding>
+            <h2><b>2 - </b> Árvores plantadas?</h2>
+        </ion-card-content>
+        <hr>
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button small color="secondary" icon-start>
+                    <ion-icon name="thumbs-up"></ion-icon>
+                    Conforme
+                </button>
+            </ion-col>
+
+            <ion-col text-right>
+                <button ion-button small color="danger" icon-start disabled>
+                    <ion-icon name="thumbs-down"></ion-icon>
+                    Não Conforme
+                </button>
+            </ion-col>
+
+            <ion-col class="col-12">
+                <button ion-button full icon-start>
+                    <ion-icon name="construct"></ion-icon>
+                    Gerar Ação
+                </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+
+    <div style="margin-top: 100px">
         <canvas #testeCanvas></canvas>
     </div>
 

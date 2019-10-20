@@ -13,6 +13,7 @@ export class HomePage implements AfterViewInit {
   dopes: number;
   nopes: number;
   chartVar: any;
+  id = 1;
 
   constructor(public navCtrl: NavController) {
     let rand;
@@ -37,15 +38,15 @@ export class HomePage implements AfterViewInit {
       type: 'pie',
       data:{
         datasets: [{
-          data:[this.dopes, this.nopes],
+          data:[4, 6],
           backgroundColor:[
             'rgba(41, 255, 122, 1)',
             'rgba(255, 148, 12, 1)'
           ]
         }],
         labels:[
-          'dope',
-          'nope'
+          'Prós',
+          'Contras'
         ]
       },
       options:{
@@ -63,4 +64,7 @@ export class HomePage implements AfterViewInit {
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
+  openPage(page){
+    this.navCtrl.push(page);
+  }
 }

@@ -1,5 +1,7 @@
 {
   "name": "grafico-teste",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

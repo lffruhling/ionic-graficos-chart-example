@@ -1,0 +1,21 @@
+.ios, .md{
+  page-foto {
+    ion-card{
+      width: 100% !important;
+    }
+
+    .pins{
+      column-count: 2;
+    }
+
+    .pin{
+      display: inline-block;
+      margin: 0 0 10px;
+      //padding: 5px;
+    }
+
+    //img{
+    //  box-shadow: 0 2px 4px 1px #b1b1b1;
+    //}
+  }
+}
